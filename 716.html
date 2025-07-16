@@ -1,0 +1,168 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7.16吃瓜合集</title>
+  <link href="https://web.sdk.qcloud.com/player/tcplayer/release/v4.2.1/tcplayer.min.css" rel="stylesheet" />
+  <script src="https://web.sdk.qcloud.com/player/tcplayer/release/v4.2.1/libs/hls.min.0.13.2m.js"></script>
+  <script src="https://web.sdk.qcloud.com/player/tcplayer/release/v4.5.0/tcplayer.v4.5.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 30px;
+    }
+
+    .video-block {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      margin-bottom: 30px;
+    }
+
+    .video-title {
+      display: block;
+      background: #0094ff;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-align: left; /* 修改为靠左对齐 */
+    }
+
+    .video-title:hover {
+      background: #0079cc;
+    }
+
+    .tcplayer-container {
+      display: none;
+      width: 100%;
+      height: 580px;
+      max-width: 1080px;
+      margin: 20px auto;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .jump-btn {
+      display: none;
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background-color: #ff6a00;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .jump-btn:hover {
+      background-color: #e85c00;
+    }
+  </style>
+</head>
+<body>
+  <h1>7.16吃瓜合集</h1>
+  <div id="content">加载中...</div>
+
+  <script>
+    const players = [];
+    let currentPlayingIndex = null;
+
+    function getLocalData() {
+      return {
+        data_mp4: [
+    { title: "吃🍉女朋友 不错哦 嘴个 👄", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/119.237.245.203/1752669639969194651/dd4e5b0d0cffb5ec9a3206f98343d9c3/1.mp4" },
+	  { title: "吃🍉😑 啥味 ？", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/61.92.53.159/1752670135929472436/8d4f538a17cfc4f4aca8b83b92befa04/2.MP4" },
+	  { title: "吃🍉#舞蹈 上 老板桌 蹦跶 😑", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/61.92.53.159/1752670330581847175/707f7708e74937de4bd935942eef508e/3.MP4" },
+	  { title: "吃🍉#微胖美女 憋不住了 #放水", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/61.92.53.159/1752670147465289181/8a1fb90fac776f5fc3ab5cb4bef8979b/4.MP4" },
+	  { title: "吃🍉👀 多大人了 还穿 开裆裤 ！", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/61.92.53.159/1752670141160264552/a2001d4d3321aca2d04ae75e0fb7b444/5.mp4" },
+	  { title: "吃🍉#缩阴 好功夫 ！", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/61.92.53.159/1752670199356630159/d37d3c528b02ddac1793657624c9858b/6.MP4" },       
+	  { title: "吃🍉太阳能板 热炸了 ？", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/61.92.53.159/1752670235471143128/78eebfe49115d6a6a0195c77937db8d9/7.MP4" },
+	  { title: "吃🍉骑行 主播哦 ？ #舔狗 太卑微了 被骑", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/61.92.53.159/1752670245493907532/b442341d44d22c94416dd348d489e86a/8.MP4" },
+	  { title: "吃🍉主人的任务", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/61.92.53.159/1752670299053165271/b2f4ceca44b1c28a4570fac88b8a977d/9.MP4" },
+    { title: "吃🍉#不拉窗帘 这种报警能抓起来吗 ？", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/61.92.53.159/1752670370916700755/bebeee39eaa012947cac4bf212a1732a/10.MP4" },
+        ],
+        btn_text: '加入吃瓜微信群',
+        btn_link: 'https://p.iqun.qq.com/web/msg/202572/1c01b67f-6b9b-40a2-b985-2f4b0158255a-1751464908353.jpg',
+        title: '7.16吃瓜合集'
+      };
+    }
+
+    async function loadVideos() {
+      const data = getLocalData();
+      document.title = data.title;
+
+      const container = document.getElementById('content');
+      container.innerHTML = '';
+
+      data.data_mp4.forEach((item, index) => {
+        const videoId = "tcplayer-container-" + index;
+        const block = document.createElement('div');
+        block.className = 'video-block';
+        block.innerHTML = `
+          <span class="video-title" data-index="${index}">${index + 1}. ${item.title}</span>
+          <video id="${videoId}" class="tcplayer-container" preload="auto" playsinline webkit-playsinline></video>
+          <button class="jump-btn">${data.btn_text}</button>
+        `;
+        container.appendChild(block);
+
+        const jumpBtn = block.querySelector('.jump-btn');
+        jumpBtn.onclick = () => window.location.href = data.btn_link;
+
+        setTimeout(() => {
+          const player = TCPlayer(videoId, { reportable: false });
+          player.src(item.url);
+          player.pause();
+          players[index] = player;
+        }, 0);
+      });
+
+      document.querySelectorAll('.video-title').forEach(titleElem => {
+        titleElem.addEventListener('click', function () {
+          const index = parseInt(this.getAttribute('data-index'));
+          if (currentPlayingIndex === index) return;
+
+          if (currentPlayingIndex !== null) {
+            const prevVideoElem = document.getElementById("tcplayer-container-" + currentPlayingIndex);
+            if (prevVideoElem) prevVideoElem.style.display = 'none';
+            const prevBlock = prevVideoElem?.parentElement;
+            prevBlock?.querySelector('.jump-btn')?.style.setProperty('display', 'none');
+            players[currentPlayingIndex]?.pause();
+          }
+
+          const currentVideoElem = document.getElementById("tcplayer-container-" + index);
+          currentVideoElem.style.display = 'block';
+          const currentBlock = this.parentElement;
+          currentBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          currentBlock.querySelector('.jump-btn').style.display = 'block';
+          players[index]?.play();
+          currentPlayingIndex = index;
+        });
+      });
+    }
+
+    loadVideos();
+  </script>
+</body>
+</html>
