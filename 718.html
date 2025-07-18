@@ -1,0 +1,170 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>7.18吃瓜合集</title>
+  <link href="https://web.sdk.qcloud.com/player/tcplayer/release/v4.2.1/tcplayer.min.css" rel="stylesheet" />
+  <script src="https://web.sdk.qcloud.com/player/tcplayer/release/v4.2.1/libs/hls.min.0.13.2m.js"></script>
+  <script src="https://web.sdk.qcloud.com/player/tcplayer/release/v4.5.0/tcplayer.v4.5.0.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 30px;
+    }
+
+    .video-block {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      margin-bottom: 30px;
+    }
+
+    .video-title {
+      display: block;
+      background: #0094ff;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-align: left; /* 修改为靠左对齐 */
+    }
+
+    .video-title:hover {
+      background: #0079cc;
+    }
+
+    .tcplayer-container {
+      display: none;
+      width: 100%;
+      height: 580px;
+      max-width: 1080px;
+      margin: 20px auto;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .jump-btn {
+      display: none;
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      background-color: #ff6a00;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .jump-btn:hover {
+      background-color: #e85c00;
+    }
+  </style>
+</head>
+<body>
+  <h1>7.18吃瓜合集</h1>
+  <div id="content">加载中...</div>
+
+  <script>
+    const players = [];
+    let currentPlayingIndex = null;
+
+    function getLocalData() {
+      return {
+        data_mp4: [
+                  { title: "吃??生活不易，八个精神小伙吃一碗水饺", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844730978792999/0ac81b867a08db0fdd357dfbebd9469e/1.mp4" },
+	  { title: "吃??捉奸在床 ??", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752845418810599293/30d9a57a2e7609c4fcac2b8f8a40ab42/2.mp4" },
+                  { title: "吃??直播 掌握 #流量密码 系列1", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844733960384282/277d38c11b94d41b97226d2379d5d49f/3.MP4" },
+	  { title: "吃??直播 掌握 #流量密码 系列2", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844731865448562/e66405e2cc27104297843723f3eed40f/4.MP4" },
+                  { title: "吃??直播 掌握 #流量密码 系列3", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844737195498766/02e7911121ec7fda02f42b9404b60488/5.MP4" },
+	  { title: "吃??直播 掌握 #流量密码 系列4", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844737110972446/c6fb1b1335d3ed0e6dbc667512d3cce9/6.MP4" },
+                  { title: "吃??直播 掌握 #流量密码 系列5", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844739664339441/d69563c7be018ea46a256dbd0b45797a/7.MP4" },
+	  { title: "吃??直播 掌握 #流量密码 系列6", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844739470501906/86e90cf92b4f66b47df34dea94035239/8.MP4" },
+                  { title: "吃??这屁股看着应该挺疼的 撞杆 #车祸 #鬼火少年 屁股 摩擦 ??", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844739243033440/27915b86373c22aa5277e456b0c8b28f/9.MP4" },
+	  { title: "吃??#纹身 真不错 蝴蝶 ?? 屁股", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844740769157871/5ea08051f23c19db2a6759c0978ec1a4/10.MP4" },
+                  { title: "吃??“ 主战 坦克 ”", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844741083891750/81f433753dd84d071e2daf156b33161a/11.MP4" },
+	  { title: "吃??这是哪里的习俗，过生日还得拴个链子", url: "https://coscdn.myjujing.com/cvd/customer/fileUploadv2/42.233.224.175/1752844741730208173/f08785a24081e6ed117b0107f84ae835/12.mp4" },
+        ],
+        btn_text: '加入吃瓜微信群',
+        btn_link: 'https://p.iqun.qq.com/web/msg/202572/1c01b67f-6b9b-40a2-b985-2f4b0158255a-1751464908353.jpg',
+        title: '7.18吃瓜合集'
+      };
+    }
+
+    async function loadVideos() {
+      const data = getLocalData();
+      document.title = data.title;
+
+      const container = document.getElementById('content');
+      container.innerHTML = '';
+
+      data.data_mp4.forEach((item, index) => {
+        const videoId = "tcplayer-container-" + index;
+        const block = document.createElement('div');
+        block.className = 'video-block';
+        block.innerHTML = `
+          <span class="video-title" data-index="${index}">${index + 1}. ${item.title}</span>
+          <video id="${videoId}" class="tcplayer-container" preload="auto" playsinline webkit-playsinline></video>
+          <button class="jump-btn">${data.btn_text}</button>
+        `;
+        container.appendChild(block);
+
+        const jumpBtn = block.querySelector('.jump-btn');
+        jumpBtn.onclick = () => window.location.href = data.btn_link;
+
+        setTimeout(() => {
+          const player = TCPlayer(videoId, { reportable: false });
+          player.src(item.url);
+          player.pause();
+          players[index] = player;
+        }, 0);
+      });
+
+      document.querySelectorAll('.video-title').forEach(titleElem => {
+        titleElem.addEventListener('click', function () {
+          const index = parseInt(this.getAttribute('data-index'));
+          if (currentPlayingIndex === index) return;
+
+          if (currentPlayingIndex !== null) {
+            const prevVideoElem = document.getElementById("tcplayer-container-" + currentPlayingIndex);
+            if (prevVideoElem) prevVideoElem.style.display = 'none';
+            const prevBlock = prevVideoElem?.parentElement;
+            prevBlock?.querySelector('.jump-btn')?.style.setProperty('display', 'none');
+            players[currentPlayingIndex]?.pause();
+          }
+
+          const currentVideoElem = document.getElementById("tcplayer-container-" + index);
+          currentVideoElem.style.display = 'block';
+          const currentBlock = this.parentElement;
+          currentBlock.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          currentBlock.querySelector('.jump-btn').style.display = 'block';
+          players[index]?.play();
+          currentPlayingIndex = index;
+        });
+      });
+    }
+
+    loadVideos();
+  </script>
+</body>
+</html>
